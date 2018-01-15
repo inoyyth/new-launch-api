@@ -7,6 +7,7 @@ export default class SolrClient {
     this.client = bluebird.promisifyAll(solr.createClient({
       host: config.solrHost,
       port: config.solrPort,
+      path: config.solrPath,
       core: core,
     })) 
   }
